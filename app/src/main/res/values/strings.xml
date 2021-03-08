@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Курс Рубля</string>
+    <string name="subtitle">Сумма в Рублях</string>
+    <string name="button">Конвертировать</string>
+</resources>
