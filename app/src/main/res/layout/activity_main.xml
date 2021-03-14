@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:id="@+id/layout"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
@@ -22,42 +21,61 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/edit_text_value_hint"
+        android:importantForAutofill="no"
         android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="@+id/subtitle"
         app:layout_constraintTop_toBottomOf="@+id/subtitle" />
 
     <Spinner
         android:id="@+id/currenciesList"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/refreshButton"
         app:layout_constraintStart_toStartOf="@+id/value"
         app:layout_constraintTop_toBottomOf="@+id/value" />
 
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        app:layout_constraintStart_toStartOf="@+id/currenciesList"
-        app:layout_constraintTop_toBottomOf="@+id/currenciesList" />
-
     <ImageButton
         android:id="@+id/refreshButton"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/refresh"
         app:layout_constraintBottom_toBottomOf="@+id/currenciesList"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/currenciesList"
         app:srcCompat="@android:drawable/ic_popup_sync" />
 
+    <EditText
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:enabled="false"
+        android:importantForAutofill="no"
+        android:inputType="none"
+        android:hint="@string/edit_text_result"
+        app:layout_constraintStart_toStartOf="@+id/currenciesList"
+        app:layout_constraintTop_toBottomOf="@+id/currenciesList" />
+
     <Button
         android:id="@+id/convertButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
         android:text="@string/button"
-        app:layout_constraintStart_toStartOf="@+id/result"
-        app:layout_constraintTop_toBottomOf="@+id/result" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/currenciesList"
+        app:layout_constraintTop_toBottomOf="@+id/result"
+        app:layout_constraintVertical_bias="0.272" />
+
+    <Button
+        android:id="@+id/copyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_copy"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/result"
+        app:layout_constraintEnd_toEndOf="@+id/refreshButton"
+        app:layout_constraintTop_toTopOf="@+id/result" />
 </androidx.constraintlayout.widget.ConstraintLayout>

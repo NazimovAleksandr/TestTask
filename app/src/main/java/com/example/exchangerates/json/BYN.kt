@@ -1,11 +1,11 @@
 package com.example.exchangerates.json
 
 data class BYN(
-    val CharCode: String,
-    val ID: String,
-    val Name: String,
-    val Nominal: Int,
-    val NumCode: String,
-    val Previous: Double,
-    val Value: Double
-)
+    override val CharCode: String,
+    override val ID: String,
+    override val Name: String,
+    override val Nominal: Int,
+    override val NumCode: String,
+    override val Previous: Double,
+    override val Value: Double
+) : Currency

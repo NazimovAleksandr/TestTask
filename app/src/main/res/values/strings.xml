@@ -2,4 +2,8 @@
     <string name="app_name">Курс Рубля</string>
     <string name="subtitle">Сумма в Рублях</string>
     <string name="button">Конвертировать</string>
+    <string name="refresh">refresh</string>
+    <string name="edit_text_value_hint">0</string>
+    <string name="button_copy">Копировать</string>
+    <string name="edit_text_result">0</string>
 </resources>

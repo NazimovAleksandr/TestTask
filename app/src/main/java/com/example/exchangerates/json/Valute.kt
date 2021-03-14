@@ -1,5 +1,7 @@
 package com.example.exchangerates.json
 
+import java.io.Serializable
+
 data class Valute(
     val AMD: AMD,
     val AUD: AUD,
@@ -35,4 +37,4 @@ data class Valute(
     val UZS: UZS,
     val XDR: XDR,
     val ZAR: ZAR
-)
+) : Serializable
