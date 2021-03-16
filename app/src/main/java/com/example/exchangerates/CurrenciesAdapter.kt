@@ -106,6 +106,6 @@ class CurrenciesAdapter(
     fun convert(value: String, selectedItemPosition: Int): Double {
         val result = currenciesList[selectedItemPosition].Value / currenciesList[selectedItemPosition].Nominal * value.toDouble()
 
-        return DecimalFormat("#.######").format(result).toDouble()
+        return DecimalFormat("#.#####").format(result).toDouble()
     }
 }
