@@ -107,9 +107,9 @@ class MainActivity : AppCompatActivity(), Callback<Currencies> {
 
     private fun createAdapter(data: Currencies, spinner: Spinner) {
         if (adapter == null) {
-            adapter = CurrenciesAdapter(this, data, spinner)
+            adapter = CurrenciesAdapter(data, this, spinner)
         } else {
-            adapter?.data = data
+            adapter?.updateData(data)
         }
 
         adapter?.listFill()
